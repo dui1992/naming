@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+html, body {
+  font-size: 62.5%;
+  font-family: 'Pretendard';
+}
+
+body {
+  font-size: 16px;
+  color: var(--colorblack);
+  line-height: 1;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 0.5s;
+  z-index: 10;
+}
+.header.bg_on {
+  background-color: var(--colorwhite);
+
+}
+.header:hover {
+  background-color: var(--colorwhite);
+}
+
+.inner {
+  width: calc(100% - 60px);
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 9;
+}
+
+.inner #naming_logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+}
+
+.inner #naming_logo img {
+  display: block;
+  height: 100%;
+}
+
+.inner .nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner .nav .left {
+  display: flex;
+  align-items: center;
+}
+
+.inner .nav .gnb {
+  display: flex;
+  align-items: center;
+}
+
+.inner .nav .left #menu_close {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.inner .nav .left #menu_close.on {
+  display: block;
+}
+
+.inner .nav .left .menu {
+  transform: translateX(-100%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 0.7s;
+
+  max-width: 480px;
+  width: 50%;
+  height: 100vh;
+  padding: 130px 30px;
+  background-color: var(--colorwhite);
+
+} 
+
+.inner .nav .left .menu.on {
+  transform: translateX(0);
+  box-shadow: 10px 0 100px rgba(0, 0, 0, 0.4);
+}
+
+.inner .nav .left .menu >ul {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  font-family: 'Genova';
+}
+
+
+.inner .nav .left .menu .depth01 {
+  display: block;
+  font-size: 24px;
+  position: relative;
+}
+
+.inner .nav .left .menu .depth01.down::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon/small_down.svg) center center / 100% no-repeat;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+
+.inner .nav .left .menu .depth01.down.on::before {
+  transform: rotate(180deg) translateY(50%);
+}
+
+.inner .nav .left .menu .depth02 {
+  padding: 22px 20px 0;
+  font-size: 20px;
+  display: none;
+}
+.inner .nav .left .menu .depth02 >li {
+  margin-bottom: 18px;
+}
+.inner .nav .left .menu .depth02 >li:hover {
+  color: var(--colorpink);
+}
+.inner .nav .left .menu .depth02 >li:last-child{
+  margin-bottom: 0;
+}
+
+.inner .nav .right >div {
+  margin-left: 28px;
+  cursor: pointer;
+}
+.inner .nav .right #search.on path {
+  fill: var(--colorpink);
+}
+.search {
+  width: 100%;
+  background-color: var(--colorwhite);
+  padding: 0 0 36px;
+  /* transform: translateY(-100px); */
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.search.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.search .search_wrap {
+  max-width: 1600px;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+
+}
+.search .search_box {
+  width: calc(100% - 56px);
+}
+.search .search_box input[type='text']{
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  padding: 8px 20px;
+  border: 1px solid var(--colorpink);
+  background-color: var(--colorgray50);
+  font-family: 'Pretendard';
+  font-size: 20px;
+}
+
+.search .search_box input[type='text']:focus {
+  border: 2px solid var(--colorpink);
+  outline: none;
+}
+
+.search #search_close {
+  cursor: pointer;
+}
+
+
+/************ footer *************/
+.footer {
+border-top: 1px solid var(--colorblack);
+}
+
+.footer .inner {
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  margin: 100px auto;
+}
+
+.footer .footer-text {
+  width: 50%;
+}
+
+.footer .footer-text p {
+  font-family: 'Genova';
+  font-size: 22px;
+}
+
+.footer .company {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 36px;
+  font-size: 14px;
+}
+
+.footer .company ul {
+  width: 50%;
+}
+.footer .company ul strong {
+  font-weight: bold;
+}
+
+.footer .company .info_eng {
+  color: var(--colorgray100);
+}
+
+
+@media screen and (max-width:1024px) {
+  .search .search_wrap {
+    width: calc(100% - 40px);
+  }
+  .footer .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 48px;
+    line-height: 1.5;
+    margin: 48px auto;
+  }
+  .footer .footer-text {
+    width: 100%;
+  }
+  .footer .company {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .inner {
+    width: calc(100% - 40px);
+  }
+  .header {
+    height: 50px;
+  }
+
+  .header #naming_logo {
+  height: 12px;
+  }
+
+  .header #menu_open {
+    width: 20px;
+    height: 20px;
+  }
+  .header #menu_open svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .header #menu_close {
+    width: 20px;
+    height: 20px;
+  }
+  .header #menu_close svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .inner .nav .right >div {
+    width: 18px;
+    height: 18px;
+    margin-left: 14px;
+  }
+
+  .inner .nav .right >div svg {
+    width: 100%;
+    height: 100%;
+  }
+  .inner .nav .left .menu {
+    padding: 100px 30px;
+  }
+  .inner .nav .left .menu >ul {
+    gap: 36px;
+  }
+  .inner .nav .left .menu .depth01 {
+    font-size: 20px;
+  }
+  .inner .nav .left .menu .depth02 {
+    font-size: 18px;
+    padding: 20px 18px 0;
+  }
+  .search {
+    padding: 6px 0 24px;
+  }
+  .search .search_box input[type='text'] {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width:600px) {
+  .footer .inner {
+    row-gap: 36px;
+    margin: 36px auto;
+  }
+  .footer .footer-text p {
+    font-size: 14px;
+  }
+  .footer .company {
+    font-size: 12px;
+    row-gap: 24px;
+  }
+  .footer .company ul {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:480px) {
+  .inner .nav .left .menu {
+    width: 100%;
+  } 
+  .inner .nav .left .menu .depth02 {
+    font-size: 16px;
+  }
+  .search {
+    padding: 0 0 12px;
+  }
+  .search .search_wrap {
+    gap: 20px;
+  }
+  .search #search_close {
+    width: 20px;
+    height: 20px;
+  }
+  .search #search_close svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .search .search_box {
+    width: 100%;
+  }
+  .search .search_box input[type='text'] {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width:390px) {
+  
+}
+
+@media screen and (max-width:360px) {
+  .inner .nav .right >div {
+    margin-left: 10px;
+  }
+}
