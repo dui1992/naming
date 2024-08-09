@@ -221,7 +221,9 @@ margin-bottom: 12px;
 .popup .cart_info .text .option #color:focus {
   outline: none;
 }
-
+.popup .cart_info .text .option #color option {
+  color: inherit;
+}
 .popup .btn {
   width: 100%;
   display: flex;
@@ -802,6 +804,7 @@ line-height: 36px;
 }
 .cs span {
   font-size: 12px;
+  color: inherit;
 }
 
 h4.section_title {
