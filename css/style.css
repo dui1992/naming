@@ -2,7 +2,10 @@
 @import url('reset.css');
 @import url('common.css');
 
-
+label {
+  position: absolute;
+  left: 99999999999999999999px;
+}
 main {
   color: var(--colorblack);
 }
