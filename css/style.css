@@ -208,6 +208,7 @@ margin-bottom: 12px;
   height: 45px;
   padding: 0 10px;
   border: 1px solid var(--colorblack);
+  color: var(--colorblack);
 
   /* 화살표 없애기 */
   -webkit-appearance:none; /* for chrome */
@@ -222,7 +223,7 @@ margin-bottom: 12px;
   outline: none;
 }
 .popup .cart_info .text .option #color option {
-  color: var(--colorblack);
+  color: inherit;
 }
 .popup .btn {
   width: 100%;
