@@ -770,6 +770,9 @@ line-height: 36px;
   .main_visual-slide .swiper-slide {
     height: 90VH;
   }
+  .main_visual-slide .swiper-slide .main-text {
+    top: 70%;
+  } 
 
 .main_visual-slide .swiper-slide.slide2 .main-text {
   mix-blend-mode: exclusion;
