@@ -180,7 +180,7 @@ display: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: stretch;
   gap: 18px;
   font-size: 18px;
 }
@@ -621,7 +621,6 @@ border-left: 1px solid var(--colorblack);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
   gap:12px;
   font-size: 12px;
 }
@@ -652,7 +651,7 @@ border-left: 1px solid var(--colorblack);
   height: 100%;
   padding: 6px 10px;
   border: 1px solid var(--colorblack);
-  background:url('../img/icon/small_down.svg') right center /no-repeat;
+  background:url('../img/icon/small_down.svg') right 10px center / 14px auto no-repeat;
   font-size: 12px;
 }
 
