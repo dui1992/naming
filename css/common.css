@@ -11,6 +11,172 @@ body {
   line-height: 1;
 }
 
+/* 플로팅 아이콘 cs */
+
+.cs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 50px;
+  border: 1px solid var(--colorblack);
+  background-color: var(--colorwhite);
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+}
+
+.cs img {
+  width: 20px;
+  height: 20px;
+}
+
+.cs span {
+  font-size: 14px;
+}
+
+/* popup */
+
+/************popup************/
+
+.popup {
+width: 100vw;
+height: 100vh;
+position: fixed;
+left: 0;
+top: 0;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 999;
+display: none;
+}
+
+.popup.on {
+  display: block;
+}
+
+.popup .quick_cart {
+  width: 640px;
+  height: 290px;
+  border: 1px solid var(--colorblack);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+.popup .cart_info {
+  display: flex;
+}
+.popup .cart_info figure {
+  width: 200px;
+  height: 230px;
+  border-right: 1px solid var(--colorblack);
+}
+
+.popup .cart_info figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.popup .cart_info .text {
+  width: 440px;
+  background-color: var(--colorwhite);
+}
+
+.popup .cart_info .text >p {
+  width: 100%;
+  height: 68px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--colorblack);
+  font-weight: bold;
+}
+
+.popup .cart_info .text .option {
+  padding: 0 30px;
+  height: 162px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+  font-size: 18px;
+}
+.popup .cart_info .text .option .item_text p{
+margin-bottom: 12px;
+}
+
+.popup .cart_info .text .option .item_text .price del{
+  margin-right: 12px;
+  color: var(--colorgray300);
+}
+.popup .cart_info .text .option .item_text .price strong{
+  color: var(--colorpink);
+}
+
+.popup .cart_info .text .option .select_box {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.popup .cart_info .text .option .select_box span {
+  white-space: nowrap;
+  margin-right: 14px;
+}
+
+.popup .cart_info .text .option #color {
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  border: 1px solid var(--colorblack);
+  color: var(--colorblack);
+
+  /* 화살표 없애기 */
+  -webkit-appearance:none; /* for chrome */
+  -moz-appearance:none; /*for firefox*/
+  appearance:none;
+
+  background:url('../img/icon/small_down.svg') no-repeat 97% center / auto;
+  font-size: 18px;
+}
+
+.popup .cart_info .text .option #color:focus {
+  outline: none;
+}
+.popup .cart_info .text .option #color option {
+  color: inherit;
+}
+.popup .btn {
+  width: 100%;
+  display: flex;
+  height: 58px;
+  cursor: pointer;
+  border-top: 1px solid var(--colorblack);
+}
+
+.popup .btn p {
+width: 320px;
+background-color: var(--colorgray100);
+text-align: center;
+line-height: 58px;
+font-family: 'Genova';
+font-size: 24px;
+}
+
+.popup .btn #cart_btn {
+  border-right: 1px solid var(--colorblack);
+  background-color: var(--colorpink);
+  color: var(--colorwhite);
+}
+
+
+
 .header {
   width: 100%;
   height: 100px;
@@ -148,6 +314,10 @@ body {
 .inner .nav .right #search.on path {
   fill: var(--colorpink);
 }
+label {
+  position: absolute;
+  left: 99999999999999999999px;
+}
 .search {
   width: 100%;
   background-color: var(--colorwhite);
@@ -199,6 +369,7 @@ body {
 /************ footer *************/
 .footer {
 border-top: 1px solid var(--colorblack);
+font-family: 'Pretendard';
 }
 
 .footer .inner {
