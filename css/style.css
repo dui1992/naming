@@ -40,8 +40,9 @@ body.scroll {
   }
 
   .cm .swiper-slide figure {
-    width: 70%;
+    width: 80%;
     height: 100%;
+    transform: translateY(2%);
   }
   
   .cm .swiper-slide figure img{
@@ -434,7 +435,7 @@ border-left: 1px solid var(--colorblack);
   .cm {
     display: none;
   }
-  
+
   h4.section_title {
     margin-top: 160px;
   }
