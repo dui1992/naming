@@ -6,6 +6,93 @@ main {
   color: var(--colorblack);
 }
 
+/****** 코치마크 ******/
+body {
+  position: relative;
+}
+body.scroll {
+  overflow: hidden;
+}
+
+.cm.close {
+  display: none;
+}
+.cm {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  }
+
+  .cm .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cm .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cm .swiper-slide figure {
+    width: 70%;
+    height: 100%;
+  }
+  
+  .cm .swiper-slide figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  
+.cm_title {
+  position: absolute;
+  width: calc(100% - 100px);
+  margin: 0 auto;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  display: flex;
+  gap: 12px;
+justify-content: space-between;
+  align-items: center;
+  color: var(--colorwhite);
+  font-size: 24px;
+  font-family: 'Genova';
+}
+.cm_title p {
+  font-family: 'Pretendard';
+  font-size: 16px;
+  margin-top: 12px;
+}
+.cm_title svg{
+  width: 18px;
+  height: 18px;
+
+}
+.cm_title svg path {
+  fill: var(--colorwhite);
+}
+.swiper-pagination {
+  bottom: 50px !important;
+}
+.swiper-pagination-bullet {
+  background-color: var(--colorwhite) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--colorpink) !important;
+}
+
+
 /**************메인 슬라이드**************/
 
 .main_visual-slide {
