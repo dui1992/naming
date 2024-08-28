@@ -431,6 +431,10 @@ border-left: 1px solid var(--colorblack);
 }
 
 @media screen and (max-width:1024px) {
+  .cm {
+    display: none;
+  }
+  
   h4.section_title {
     margin-top: 160px;
   }
