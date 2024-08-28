@@ -42,7 +42,7 @@ body.scroll {
   .cm .swiper-slide figure {
     width: 80%;
     height: 100%;
-    transform: translateY(2%);
+    transform: translateY(0.7%);
   }
   
   .cm .swiper-slide figure img{
@@ -68,10 +68,15 @@ justify-content: space-between;
   font-size: 24px;
   font-family: 'Genova';
 }
+.cm_title .text {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
 .cm_title p {
   font-family: 'Pretendard';
   font-size: 16px;
-  margin-top: 12px;
+  margin-bottom: 1px;
 }
 .cm_title svg{
   width: 18px;
